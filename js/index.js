@@ -9,7 +9,7 @@ function updateSubtotal(product) {
   let subtotalElem = product.querySelector('.subtotal span');
 
   subtotalElem.innerText = subtotal;
-  return subtotalElem.innerText;
+  return subtotal;
 }
 
 function calculateAll() {
@@ -18,14 +18,22 @@ function calculateAll() {
   // const singleProduct = document.querySelector('.product');
   // updateSubtotal(singleProduct);
   // end of test
-
+let sumatorio = 0;
   // ITERATION 2
   const allItems = document.querySelectorAll(".product");
-  allItems.forEach((item)=>{updateSubtotal(item)});
+  allItems.forEach((item)=>
+  {
+    let subtotal = updateSubtotal(item)
+    sumatorio += subtotal
+    console.log(subtotal);
+  });
+  
+
 
   // ITERATION 3
-  //... your code goes here
+
 }
+
 
 // ITERATION 4
 
